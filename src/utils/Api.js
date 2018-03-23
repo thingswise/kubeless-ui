@@ -30,6 +30,7 @@ export default class Api {
     return fetch('proxy', {
       method: 'post',
       headers,
+      credentials: 'include',
       body: JSON.stringify(forwardBody)
     }).then((response = {}) => {
       if (__DEV__) {
